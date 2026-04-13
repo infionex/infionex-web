@@ -1,10 +1,12 @@
 import React from 'react'
-import Hero from '../components/home/Hero'
+import WorkSection from '../components/WorkSection'
+import ServicesSection from '../components/ServicesSection'
 
 export default function Home() {
   return (
-    <div className='w-screen'>
-      <Hero/>
+    <div>
+      <WorkSection />
+      <ServicesSection/>
     </div>
   )
 }
