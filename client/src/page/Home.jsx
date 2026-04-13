@@ -1,12 +1,14 @@
 import React from 'react'
-import WorkSection from '../components/WorkSection'
+import Hero from '../components/home/Hero'
 import ServicesSection from '../components/ServicesSection'
+import WorkSection from '../components/WorkSection'
 
 export default function Home() {
   return (
     <div>
-      <WorkSection />
-      <ServicesSection/>
+        <Hero/>
+        <ServicesSection/>
+        <WorkSection/>
     </div>
   )
 }

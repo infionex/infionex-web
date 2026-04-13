@@ -1,11 +1,12 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Home from './page/Home'
+
 import Navbar from './components/Navbar'
+import Home from './page/Home'
 
 export default function App() {
   return (
-    <div className=''>
+    <div>
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home />} />

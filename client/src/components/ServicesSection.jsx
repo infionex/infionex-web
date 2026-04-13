@@ -1,3 +1,5 @@
+
+
 import React from 'react'
 import { TvMinimal,TrendingUp,LayoutGrid } from 'lucide-react'
 import service1 from '../assets/images/service1.png'
@@ -5,6 +7,7 @@ import service2 from '../assets/images/service2.png'
 import service3 from '../assets/images/service3.png' 
 
 export default function ServicesSection() {
+
     const services = [
         {
             id: 1,
@@ -32,13 +35,13 @@ export default function ServicesSection() {
         }
     ]
     return (
-        <section className=" bg-[#131313]" id="services">
-            <div className="max-w-425 mx-auto  py-32 px-8 md:px-24 mb-20   ">
+        <section className="font-head bg-[#131313]" id="services">
+            <div className="max-w-425 mx-auto  py-32 px-8 md:px-24   ">
                 <span className="text-[#ff8e7d] font-headline font-bold tracking-[0.2em] uppercase text-sm mb-4 block" >03 / CAPABILITIES</span>
                 <h2 className="font-headline text-4xl md:text-6xl font-black tracking-tighter uppercase mb-24 text-white" >SYSTEMS OF INFLUENCE</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 border-[#484848]/10">
-                        {services.map((service,index ) => {
+                        {services?.map((service,index ) => {
                             const Icon = service.icon;
                             return (
                     <div key={index } className="relative group overflow-hidden bg-[#191919] ">

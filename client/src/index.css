@@ -7,4 +7,9 @@
 @theme {
   --font-head: "Space Grotesk", sans-serif;
   --font-title:"Manrope", sans-serif;
+
+  --color-primary-color:#db0404;
+  --color-secondary-color:#0e0e0e;
+  --color-third-color:#ff8e7d;
+  --color-label-color:#ABABAB;
 }

@@ -26,7 +26,7 @@ export default function WorkSection() {
     }]
     return (
 
-        <section className="max-w-425 mx-auto py-22 px-8 md:px-24">
+        <section className="font-head bg-black max-w-425 mx-auto py-22 px-8 md:px-24">
             <div className=" mb-20  flex justify-between  ">
                 <div>
                     <span className="text-[#ff8e7d] font-headline font-bold  tracking-[0.2em] uppercase text-sm block">
@@ -42,7 +42,7 @@ export default function WorkSection() {
                 </div>
             </div>  
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-15 text-white">
-                {works.map((item) => (
+                {works?.map((item) => (
                     <div key={item.id} className={`group relative overflow-hidden  bg-[#191919] aspect-3/4 ${item.style || ''}`} >
                         <img
                             className="w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-110"
