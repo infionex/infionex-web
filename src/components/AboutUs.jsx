@@ -1,9 +1,17 @@
 import React from 'react'
+<<<<<<< HEAD
 import img from '../assets/images/about1.png'
 export default function AboutUs() {
     return (
         <div className='h-screen px-10 md:px-24 bg-secondary-color content-center'>
             <div className='flex max-w-425 mx-auto md:py-22 px-8 md:px-24 '>
+=======
+import img from '../../assets/images/about1.png'
+export default function AboutUs() {
+    return (
+        <div className='h-screen px-10 md:px-24 bg-secondary-color content-center'>
+            <div className='flex'>
+>>>>>>> 756b4443820376ef447221a9ae147ace1b6bc724
                 <div className='content-center flex flex-col gap-10 md:w-[50%] bg-green600 justify-center'>
                     <div className='flex flex-col gap-6'>
                         <p className='text-third-color font-head font-bold tracking-[0.2em] uppercase text-sm'>01/ABOUT US</p>
