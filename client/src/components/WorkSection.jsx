@@ -26,7 +26,7 @@ export default function WorkSection() {
     }]
     return (
 
-        <section className="font-head bg-[#0e0e0e]">
+        <section className="font-head bg-black">
             <div className='max-w-425 mx-auto py-22 px-8 md:px-24'>
             <div className=" mb-20  flex justify-between  ">
                 <div>

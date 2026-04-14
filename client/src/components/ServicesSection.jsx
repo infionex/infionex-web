@@ -35,9 +35,9 @@ export default function ServicesSection() {
         }
     ]
     return (
-        <section className="font-head bg-[#131313]" id="services">
+        <section className="font-head bg-secondary-color" id="services">
             <div className="max-w-425 mx-auto  py-32 px-8 md:px-24   ">
-                <span className="text-[#ff8e7d] font-headline font-bold tracking-[0.2em] uppercase text-sm mb-4 block" >03 / CAPABILITIES</span>
+                <span className="text-third-color font-headline font-bold tracking-[0.2em] uppercase text-sm mb-4 block" >03 / CAPABILITIES</span>
                 <h2 className="font-headline text-4xl md:text-6xl font-black tracking-tighter uppercase mb-24 text-white" >SYSTEMS OF INFLUENCE</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 border-[#484848]/10">
@@ -49,7 +49,7 @@ export default function ServicesSection() {
                             <img  className="w-full h-full object-cover opacity-10 group-hover:opacity-30 transition-opacity duration-500 grayscale" src={service.image} />
                         </div>
                         <div className="p-12 relative z-10 hover:bg-[#1f1f1f]/50 transition-colors h-full">
-                            <Icon className="w-10 h-10 text-[#ff8e7d] mb-8" />
+                            <Icon className="w-10 h-10 text-third-color mb-8" />
 
                             <h3 className="font-headline text-2xl font-bold uppercase mb-6 text-white">{service.title}</h3>
                             <p className="font-body text-[#ababab] leading-relaxed mb-8">
@@ -57,9 +57,9 @@ export default function ServicesSection() {
 
                             </p>
                             <ul className="space-y-4 font-headline text-xs font-bold tracking-widest text-[#ababab] group-hover:text-white transition-colors">
-                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-[#ff8e7d]"></div> {service.features[0]}</li>
-                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-[#ff8e7d]"></div> {service.features[1]}</li>
-                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-[#ff8e7d]"></div> {service.features[2]}</li>
+                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-third-color"></div> {service.features[0]}</li>
+                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-third-color"></div> {service.features[1]}</li>
+                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-third-color"></div> {service.features[2]}</li>
                             </ul>
                         </div>
                     </div>

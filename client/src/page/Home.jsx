@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from '../components/home/Hero'
+import ServicesSection from '../components/ServicesSection'
 import WorkSection from '../components/WorkSection'
 import AboutUs from '../components/home/AboutUs'
 import ProcessSection from '../components/ProcessSection'
@@ -11,6 +12,7 @@ export default function Home() {
         <Hero/>
         <AboutUs/>
         <WorkSection/>
+        <ServicesSection/>
         <ProcessSection/>
         <ContactSection/>
     </div>

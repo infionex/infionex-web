@@ -4,10 +4,10 @@ import { MdEmail } from "react-icons/md";
 
 const ContactSection = () => {
     return (
-        <section className="font-head bg-black max-w-425 mx-auto py-22 px-8 md:px-24" >
+        <section className="font-head bg-secondary-color max-w-425 mx-auto py-22 px-8 md:px-24" >
             <div className='grid grid-cols-1 lg:grid-cols-2  text-white'>
                 <div>
-                    <span className="text-[#ff8e7d] font-headline font-bold tracking-[0.2em] uppercase text-sm mb-4 block">05 / COMMENCE</span>
+                    <span className="text-third-color font-headline font-bold tracking-[0.2em] uppercase text-sm mb-4 block">05 / COMMENCE</span>
                     <h1 className="font-headline text-4xl md:text-6xl font-black tracking-tighter uppercase mb-24 text-white" >LET'S BUILD<br />SOMETHING BOLD</h1>
                     {/* <div className='flex'>
                         <p><IoLocationSharp size={24}/></p> 
@@ -42,7 +42,7 @@ const ContactSection = () => {
                         <input type="text" placeholder='Name' />
                         <hr />
                     </div>
-                    <button className='bg-[#ff8e7d] text-black font-bold py-3 px-6 mt-10 w-full'>SEND</button>
+                    <button className='bg-third-color text-black font-bold py-3 px-6 mt-10 w-full'>SEND</button>
                 </div>
             </div>
         </section>
