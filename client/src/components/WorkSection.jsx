@@ -26,7 +26,8 @@ export default function WorkSection() {
     }]
     return (
 
-        <section className="font-head bg-black max-w-425 mx-auto py-22 px-8 md:px-24">
+        <section className="font-head bg-[#0e0e0e]">
+            <div className='max-w-425 mx-auto py-22 px-8 md:px-24'>
             <div className=" mb-20  flex justify-between  ">
                 <div>
                     <span className="text-[#ff8e7d] font-headline font-bold  tracking-[0.2em] uppercase text-sm block">
@@ -61,7 +62,7 @@ export default function WorkSection() {
                 </div>
                 ))}
             </div>
-
+</div>
         </section >
 
 
