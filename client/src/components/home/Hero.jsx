@@ -4,7 +4,7 @@ import { ChevronDown } from 'lucide-react';
 export default function Hero() {
     return (
         <div className='relative h-screen px-10 m:px-24 content-center text-white  bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(\src\assets\images\hero-bg.jpg)] bg-center bg-cover'>
-            <div className='md:w-1/2 md:text-left md:items-start  text-center  flex flex-col items-center gap-6 mt-15 md:mt-20'>
+            <div className='   text-center  flex flex-col items-center gap-6 mt-15 md:mt-20'>
                 <div>
                     <h1 className='font-head md:leading-21 text-5xl sm:text-7xl md:text-[100px] tracking-wi font-bold transition-all duration-300 ease-in-out'>ENGINEERING<br /><span className='text-transparent [-webkit-text-stroke:1px_#ABABAB]'>DIGITAL</span><br /> DOMINANCE</h1>
                 </div>
