@@ -5,33 +5,29 @@ import { MdEmail } from "react-icons/md";
 
 const ContactSection = () => {
     return (
-        <section className="font-head bg-[#131313] " >
-            <div className='max-w-425 mx-auto md:py-32 px-8 md:px-24 '>
-            <div className='grid grid-cols-1 lg:grid-cols-2  text-white'>
-                <div>
-                    <span className="text-[#ff8e7d] font-headline font-bold tracking-[0.2em] uppercase text-sm mb-4 block">05 / COMMENCE</span>
-                    <h1 className="font-headline text-4xl md:text-6xl font-black tracking-tighter uppercase mb-24 text-white" >LET'S BUILD<br />SOMETHING BOLD</h1>
-                    {/* <div className='flex'>
-                        <p><IoLocationSharp size={24}/></p> 
-                        <p>123 Main Street, City, State 12345</p>
-                    </div> */}
+        <section id='contact' className="font-head bg-[#131313] " >
+            <div className='max-w-425 mx-auto py-10 md:py-20 px-8 md:px-24 '>
+                <div className='grid grid-cols-1 lg:grid-cols-2  text-white'>
+                    <div>
+                        <span className="text-[#ff8e7d] font-headline font-bold tracking-[0.2em] uppercase text-sm mb-4 block">05 / COMMENCE</span>
+                        <h1 className="font-headline text-4xl md:text-6xl font-black tracking-tighter uppercase mb-10 text-white" >LET'S BUILD<br />SOMETHING BOLD</h1>
 
-                    <div className='flex items-start '>
-                        <span><IoLocationSharp size={24} color='red'/></span>
-                        <div className='mx-3'>
-                            <h4>COMMAND CENTERS</h4>
-                            <p>123 Main Street, City, State 12345</p>
+                        <div className='flex items-start '>
+                            <span><IoLocationSharp size={24} color='red' /></span>
+                            <div className='mx-3'>
+                                <h4>COMMAND CENTERS</h4>
+                                <p>123 Main Street, City, State 12345</p>
+                            </div>
+                        </div>
+                        <div className='flex items-start my-10 '>
+                            <span><MdEmail size={24} color='red' /></span>
+                            <div className='mx-3'>
+                                <h4>DIRECT TRANSMISSION</h4>
+                                <p>infionex.in@gmail.com</p>
+                            </div>
                         </div>
                     </div>
-                    <div className='flex items-start my-5 '>
-                        <span><MdEmail size={24} color='red'/></span>
-                        <div className='mx-3'>
-                            <h4>DIRECT TRANSMISSION</h4>
-                            <p>infionex.in@gmail.com</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="bg-[#191919]  p-8 md:p-16 relative">
+                    <div className="bg-[#191919]  p-8 md:p-16 relative">
                         <div className="absolute top-0 right-0 w-2 h-16 bg-[#ff8e7d]"></div>
 
                         <form className="space-y-6">
@@ -90,7 +86,7 @@ const ContactSection = () => {
 
                         </form>
                     </div>
-            </div>
+                </div>
             </div>
         </section>
     )

@@ -6,7 +6,7 @@ import launch from '../assets/images/process-4.png'
 const ProcessSection = () => {
     return (
         <section className="font-head bg-[#0a0a0a]" id='services'>
-            <div className='max-w-425 mx-auto md:py-32 px-8 md:px-24 " '>
+            <div className='max-w-425 mx-auto py-10 md:py-32 px-8 md:px-24 " '>
             <div className=' mb-24 text-center'>
                 <span className="text-[#ff8e7d] font-headline font-bold tracking-[0.2em] uppercase text-sm mb-4 block">04 / EXECUTION</span>
                 <h1 className="font-headline text-4xl md:text-6xl font-black tracking-tighter uppercase mb-24 text-white" >THE KINETIC CYCLE</h1>
