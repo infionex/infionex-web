@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../../assets/images/about1.png'
+import img from '../assets/images/about1.png'
 export default function AboutUs() {
     return (
         <div className='h-screen px-10 md:px-24 bg-secondary-color content-center'>
