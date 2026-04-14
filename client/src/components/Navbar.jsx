@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from '../assets/infionex-logo.png'
+import logo from '../assets/images/infionex-logo.png'
 import { Menu } from 'lucide-react';
 import { Link } from 'react-router-dom'
 import { X } from 'lucide-react';
