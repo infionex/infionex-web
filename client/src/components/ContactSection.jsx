@@ -78,7 +78,7 @@ const ContactSection = () => {
                             </div>
 
                             <button
-                                className="w-full kinetic-gradient py-5 font-headline font-bold text-xl uppercase tracking-widest text-[#000000] transition-transform active:scale-95"
+                                className="w-full kinetic-gradient bg-linear-to-r from-third-color to-primary-color py-5 font-headline font-bold text-xl uppercase tracking-widest text-[#000000] transition-transform active:scale-95"
                                 type="submit"
                             >
                                 INITIATE PROTOCOL
