@@ -77,12 +77,10 @@ export default function WhyChooseUs() {
         transition={{ duration: 0.7 }}
         className="text-center mb-16 relative z-10"
       >
-        <p className="text-red-400 uppercase tracking-[0.3em] text-sm">
-          Why Choose Us
-        </p>
-        <h2 className="text-4xl md:text-6xl font-extrabold mt-3">
-          THE INFIONEX ADVANTAGE
-        </h2>
+         <div className=' mb-24 text-center'>
+                <span className="text-[#ff8e7d] font-family-headline font-bold tracking-[0.2em] uppercase text-sm mb-4 block">05 / WHY CHOOSE US</span>
+                <h1 className="font-family-headline text-4xl md:text-6xl font-black tracking-tighter uppercase mb-24 text-white" >THE INFIONEX ADVANATGE</h1>
+            </div>
         <div className="w-24 h-[2px] bg-red-500 mx-auto mt-6" />
       </motion.div>
 
@@ -101,18 +99,18 @@ export default function WhyChooseUs() {
               key={i}
               variants={cardVariants}
               whileHover={{ scale: 1.07, rotateX: 5, rotateY: -5 }}
-              className="group relative p-[1px] rounded-2xl bg-gradient-to-br from-white/10 to-white/5"
+              className="group relative p-px rounded-2xl bg-gradient-to-br from-white/10 to-white/5"
             >
-              <div className="h-full rounded-2xl bg-[#111] p-7 border border-white/10 group-hover:border-red-500/50 transition-all duration-300">
+              <div className="h-full  bg-[#111] p-7 border border-white/10 group-hover:border-red-500/50 transition-all duration-300">
                 {/* Icon */}
                 <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-red-500/10 mb-5 group-hover:bg-red-500/20 transition">
                   <Icon className="text-red-400" size={26} />
                 </div>
 
-                <h3 className="text-xl font-semibold mb-2 tracking-wide">
+                <h3 className="font-family-headline text-xl font-semibold mb-2 tracking-wide">
                   {item.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="font-family-body text-gray-400 text-sm leading-relaxed">
                   {item.desc}
                 </p>
 
