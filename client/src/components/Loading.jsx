@@ -3,52 +3,40 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function Loading({ onFinish }) {
     const [exit, setExit] = useState(false);
+    const [progress, setProgress] = useState(0);
+
+    const text = "INFIONEX";
 
     useEffect(() => {
-        const timer = setTimeout(() => {
-            setExit(true);
+        let start = 0;
 
-            setTimeout(() => {
-                onFinish && onFinish();
-            }, 500);
+        const interval = setInterval(() => {
+            start += 1;
+            setProgress(start);
 
-        }, 3700);
+            if (start >= 100) {
+                clearInterval(interval);
 
-        return () => clearTimeout(timer);
+                setTimeout(() => {
+                    setExit(true);
+
+                    setTimeout(() => {
+                        onFinish && onFinish();
+                    }, 500);
+
+                }, 300);
+            }
+        }, 32);
+
+        return () => clearInterval(interval);
     }, [onFinish]);
 
-    const text = "INFIONEX".split("");
-
-    // TEXT ANIMATION
-    const container = {
-        hidden: {},
-        show: {
-            transition: {
-                staggerChildren: 0.12
-            }
-        }
-    };
-
-   const letter = {
-        hidden: { opacity: 0,y:40, filter: "blur(10px)" },
-        show: {
-            opacity: 100,
-           y: [ 0,-20,0 ],   
-        transition: {
-            duration: 1,
-            ease: "easeInOut"
-        },
-            
-            filter: "blur(0px)",
-            
-        }
-    };
-
     const exitAnim = {
-        opacity: 0,
+        opacity: 30,
         scale: 1.2,
-        filter: "blur(20px)",
-        transition: { duration: 0.7 }
+        height: -100,
+        // filter: "blur(20px)",
+        transition: { duration: 0.6 }
     };
 
     return (
@@ -71,33 +59,33 @@ export default function Loading({ onFinish }) {
                             duration: 3,
                             repeat: Infinity
                         }}
-                        className="absolute w-96 h-96 bg-primary-color/10 rounded-full blur-3xl"
+                        className="absolute w-96 h-96 bg-white/30 rounded-full blur-3xl"
                     />
 
-                    {/* TEXT */}
-                    <motion.h1
-                        variants={container}
-                        initial="hidden"
-                        animate="show"
-                        className="flex text-label-color font-head text-4xl md:text-6xl font-bold tracking-[0.5em]"
-                    >
-                        {text.map((char, i) => (
-                            <motion.span key={i} variants={letter} className="inline-block">
-                                {char === " " ? "\u00A0" : char}
-                            </motion.span>
-                        ))}
-                    </motion.h1>
+                    {/* NAME AS PROGRESS REVEAL */}
+                    <div className="relative font-head text-4xl md:text-5xl font-bold tracking-[0.5em] text-white/20">
+
+                        {/* BACK TEXT (BASE) */}
+                        <span>{text}</span>
+
+                        {/* FRONT TEXT (REVEAL MASK) */}
+                        <motion.span
+                            className="absolute left-0 top-0 text-label-color overflow-hidden whitespace-nowrap"
+                            style={{
+                                width: `${progress}%`,
+                            }}
+                        >
+                            {text}
+                        </motion.span>
+
+                    </div>
 
                     {/* LOADING BAR */}
-                    <div className="mt-10 w-64 md:w-96 h-[2px] bg-white/10 relative overflow-hidden rounded-full">
-
+                    <div className="mt-10 w-64 md:w-96 h-0.5 bg-white/10 relative overflow-hidden rounded-full">
                         <motion.div
-                            className="h-full bg-gradient-to-r from-primary-color to-red-500"
-                            initial={{ width: "0%" }}
-                            animate={{ width: "100%" }}
-                            transition={{ duration: 3.2, ease: "easeInOut" }}
+                            className="h-full bg-linear-to-r from-primary-color to-red-500"
+                            style={{ width: `${progress}%` }}
                         />
-
                     </div>
 
                 </motion.div>

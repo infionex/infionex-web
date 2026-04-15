@@ -14,7 +14,7 @@ export default function AboutUs() {
     }
 
     return (
-        <section id='about' className=' h-screen px-10 md:px-24 bg-secondary-color content-center'>
+        <section id='about' className=' h-screen max-w-425 px-10 md:px-0 bg-secondary-color content-center'>
             <div className='flex max-w-425 mx-auto md:py-32 px-8 md:px-24'>
                 <div className='content-center flex flex-col gap-10 md:w-[50%] bg-green600 justify-center'>
                     <div className='flex flex-col gap-6'>
