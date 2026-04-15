@@ -87,17 +87,17 @@ export default function Navbar() {
       </div>
 
       {/* NAVBAR */}
-      <div className='bg-secondary-color/80 fixed top-0 left-0 z-40 text-white w-full px-10 py-3 flex justify-center backdrop-blur-md'>
+      <div className='bg-secondary-color/80 fixed top-0 left-0 z-40 text-white w-full px-10 py-2 flex justify-center drop-shadow-2xl drop-shadow-black/60 backdrop-blur-md'>
 
         <div className='max-w-425 w-full flex justify-between items-center'>
 
           {/* LOGO */}
           <div>
-            <img className='h-17 object-contain ' src={logo} alt="logo" />
+            <img className='h-15 object-contain ' src={logo} alt="logo" />
           </div>
 
           {/* DESKTOP NAV */}
-          <div className='hidden md:flex gap-10 text-sm font-head relative'>
+          <div className='hidden md:flex gap-10 text-md font-head relative'>
 
             {navItems.map((item, index) => (
               <button
