@@ -63,10 +63,10 @@ const cardVariants = {
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative w-full bg-gradient-to-b from-[#070707] via-[#0b0b0b] to-[#070707] text-white py-24 px-6 overflow-hidden">
+    <section className="relative w-full bg-gradient-to-b from-[#070707] via-[#0b0b0b] to-[#070707] text-white py-16 md:py-24 px-4 sm:px-8 md:px-16 lg:px-24 overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-red-500/10 blur-[120px] rounded-full" />
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-red-500/10 blur-[100px] md:blur-[120px] rounded-full" />
       </div>
 
       {/* Heading */}
@@ -75,13 +75,15 @@ export default function WhyChooseUs() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
-        className="text-center mb-16 relative z-10"
+        className="text-center mb-12 md:mb-20 relative z-10"
       >
-         <div className=' mb-24 text-center'>
-                <span className="text-[#ff8e7d] font-family-headline font-bold tracking-[0.2em] uppercase text-sm mb-4 block">05 / WHY CHOOSE US</span>
-                <h1 className="font-family-headline text-4xl md:text-6xl font-black tracking-tighter uppercase mb-24 text-white" >THE INFIONEX ADVANATGE</h1>
-            </div>
-        <div className="w-24 h-[2px] bg-red-500 mx-auto mt-6" />
+        <span className="text-[#ff8e7d] font-family-headline font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-3 block">
+          05 / WHY CHOOSE US
+        </span>
+        <h1 className="text-3xl font-family-headline sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter uppercase text-white leading-tight px-2">
+          THE INFIONEX ADVANTAGE
+        </h1>
+        <div className="w-16 md:w-24 h-[2px] bg-red-500 mx-auto mt-5 md:mt-6" />
       </motion.div>
 
       {/* Grid */}
@@ -90,7 +92,7 @@ export default function WhyChooseUs() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto relative z-10"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 max-w-6xl mx-auto relative z-10"
       >
         {features.map((item, i) => {
           const Icon = item.icon;
@@ -98,23 +100,23 @@ export default function WhyChooseUs() {
             <motion.div
               key={i}
               variants={cardVariants}
-              whileHover={{ scale: 1.07, rotateX: 5, rotateY: -5 }}
+              whileHover={{ scale: 1.04 }}
               className="group relative p-px rounded-2xl bg-gradient-to-br from-white/10 to-white/5"
             >
-              <div className="h-full  bg-[#111] p-7 border border-white/10 group-hover:border-red-500/50 transition-all duration-300">
+              <div className="h-full w-full bg-[#111]  p-5 sm:p-6 md:p-7 border border-white/10 group-hover:border-red-500/50 transition-all duration-300">
                 {/* Icon */}
-                <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-red-500/10 mb-5 group-hover:bg-red-500/20 transition">
-                  <Icon className="text-red-400" size={26} />
+                <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-xl bg-red-500/10 mb-4 md:mb-5 group-hover:bg-red-500/20 transition">
+                  <Icon className="text-red-400" size={22} />
                 </div>
 
-                <h3 className="font-family-headline text-xl font-semibold mb-2 tracking-wide">
+                <h3 className="text-base font-family-headline md:text-lg font-semibold mb-2 tracking-wide">
                   {item.title}
                 </h3>
-                <p className="font-family-body text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-400 font-family-body text-sm leading-relaxed">
                   {item.desc}
                 </p>
 
-                <div className="w-0 group-hover:w-full h-[2px] bg-red-500 transition-all duration-500 mt-5" />
+                <div className="w-0 group-hover:w-full h-[2px] bg-red-500 transition-all duration-500 mt-4 md:mt-5" />
               </div>
             </motion.div>
           );

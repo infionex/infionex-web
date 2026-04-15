@@ -36,7 +36,7 @@ export default function ServicesSection() {
     ]
     return (
         <section className="font-head bg-[#131313]" id="services">
-            <div className="max-w-425 mx-auto  md:py-32 px-8 md:px-24   ">
+            <div className="max-w-425 mx-auto py-22 md:py-32 px-8 md:px-24   ">
                 <span className="text-[#ff8e7d] font-headline font-bold tracking-[0.2em] uppercase text-sm mb-4 block" >03 / CAPABILITIES</span>
                 <h2 className="font-headline text-4xl md:text-6xl font-black tracking-tighter uppercase mb-24 text-white" >SYSTEMS OF INFLUENCE</h2>
 
@@ -48,11 +48,11 @@ export default function ServicesSection() {
                         <div className="absolute inset-0 z-0">
                             <img  className="w-full h-full object-cover opacity-10 group-hover:opacity-30 transition-opacity duration-500 grayscale" src={service.image} />
                         </div>
-                        <div className="p-12 relative z-10 hover:bg-[#1f1f1f]/50 transition-colors h-full">
-                            <Icon className="w-10 h-10 text-[#ff8e7d] mb-8" />
+                        <div className="p-8 relative z-10 hover:bg-[#1f1f1f]/50 transition-colors h-full">
+                            <Icon className="w-10 h-10 text-[#ff8e7d] mb-5" />
 
-                            <h3 className="font-headline text-2xl font-bold uppercase mb-6 text-white">{service.title}</h3>
-                            <p className="font-body text-[#ababab] leading-relaxed mb-8">
+                            <h3 className="font-headline text-2xl font-bold uppercase mb-5 text-white">{service.title}</h3>
+                            <p className="font-body  text-[#ababab] leading-relaxed mb-5">
                                 {service.description}
 
                             </p>
