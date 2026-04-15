@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
-import logo from '../assets/images/infionex-logo.png'
+// import logo from '../assets/images/infionex-logo.png'
+import logo from '../assets/images/logo.png'
 import { Menu, X } from 'lucide-react';
 import AboutUs from './AboutUs';
 
@@ -92,7 +93,7 @@ export default function Navbar() {
 
           {/* LOGO */}
           <div>
-            <img className='h-10' src={logo} alt="logo" />
+            <img className='h-17 object-contain ' src={logo} alt="logo" />
           </div>
 
           {/* DESKTOP NAV */}
