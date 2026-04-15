@@ -15,35 +15,40 @@ const ContactSection = () => {
                     </div> */}
 
                     <div className='flex items-start '>
-                        <span><IoLocationSharp size={24} color='red'/></span>
+                        <span><IoLocationSharp size={24} color='red' /></span>
                         <div className='mx-3'>
                             <h4>COMMAND CENTERS</h4>
                             <p>123 Main Street, City, State 12345</p>
                         </div>
                     </div>
                     <div className='flex items-start my-5 '>
-                        <span><MdEmail size={24} color='red'/></span>
+                        <span><MdEmail size={24} color='red' /></span>
                         <div className='mx-3'>
                             <h4>DIRECT TRANSMISSION</h4>
                             <p>infionex@gmail.com</p>
                         </div>
                     </div>
                 </div>
-                <div className='bg-white/10 w-full lg:w-4/5 h-full text-start p-10 mx-auto '>
-                    <div>
-                        <input type="text" placeholder='Name' py-2 className='w-full'/>
-                        <hr className=''/>
+                 
+                <form className="space-y-12 bg-white/10 mx-7 " m-5>
+                    <div className="relative m-5 ">
+                        <input class="peer w-full bg-transparent border-0 border-b   pt-6 pb-2 font-body text-lg outline-none transition-all" id="name" placeholder=" " type="text" />
+                        <label class="absolute left-0 top-6 text-on-surface-variant uppercase tracking-widest text-xs font-bold transition-all peer-focus:-top-2 peer-focus:text-primary" for="name">IDENTIFIER / NAME</label>
                     </div>
-                      <div className='my-20'>
-                        <input type="text" placeholder='Name'  className=''/>
-                        <hr className=''/>
+                    <div className="relative m-5">
+                        <input class="peer w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary pt-6 pb-2 font-body text-lg outline-none transition-all" id="email" placeholder=" " type="email" />
+                        <label class="absolute left-0 top-6 text-on-surface-variant uppercase tracking-widest text-xs font-bold transition-all peer-focus:-top-2 peer-focus:text-primary " for="email">TRANSMISSION / EMAIL</label>
                     </div>
-                      <div>
-                        <input type="text" placeholder='Name' />
-                        <hr />
+                    <div className="relative m-5">
+                        <textarea class="peer w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary pt-6 pb-2 font-body text-lg outline-none transition-all resize-none" id="message" placeholder=" " rows="4"></textarea>
+                        <label class="absolute left-0 top-6 text-on-surface-variant uppercase tracking-widest text-xs font-bold transition-all peer-focus:-top-2 peer-focus:text-primary " for="message">MISSION DETAILS</label>
                     </div>
-                    <button className='bg-[#ff8e7d] text-black font-bold py-3 px-6 mt-10 w-full'>SEND</button>
-                </div>
+                    <div className='m-5'>
+                        <button className="w-full bg-gradient-to-r from-[#f87171] to-[#ff0000] py-5 border  text-black  font-bold text-xl uppercase tracking-widest text-on-primary-fixed transition-transform active:scale-95" type="submit">
+                        INITIATE PROTOCOL
+                    </button>
+                    </div>
+                </form>
             </div>
         </section>
     )
