@@ -10,7 +10,7 @@ export default function App() {
   const [loading, setLoading] = useState(true);
 
   return (
-    <div className="bg-black min-h-screen">
+    <div  key="Home" className="bg-black min-h-screen">
       <Navbar />
 
       <Routes>
