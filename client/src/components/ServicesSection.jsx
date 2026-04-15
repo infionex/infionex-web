@@ -36,7 +36,7 @@ export default function ServicesSection() {
     ]
     return (
         <section className="font-head bg-[#131313]" id="services">
-            <div className="max-w-425 mx-auto  py-32 px-8 md:px-24   ">
+            <div className="max-w-425 mx-auto  md:py-32 px-8 md:px-24   ">
                 <span className="text-[#ff8e7d] font-headline font-bold tracking-[0.2em] uppercase text-sm mb-4 block" >03 / CAPABILITIES</span>
                 <h2 className="font-headline text-4xl md:text-6xl font-black tracking-tighter uppercase mb-24 text-white" >SYSTEMS OF INFLUENCE</h2>
 
