@@ -5,6 +5,7 @@ import AboutUs from '../components/AboutUs'
 import ServicesSection from '../components/ServicesSection'
 import ProcessSection from '../components/ProcessSection'
 import ContactSection from '../components/ContactSection'
+import WhyChooseUs from '../components/WhyChooseUs'
 
 export default function Home() {
   
@@ -15,6 +16,7 @@ export default function Home() {
         <ServicesSection/>
         <WorkSection/>
         <ProcessSection/>
+        <WhyChooseUs/>
         <ContactSection/>
     </div>
   )
