@@ -1,93 +1,190 @@
-
 import React from 'react'
+import { motion } from "framer-motion"
+
 import strategy from '../assets/images/process-strategy.png'
 import design from '../assets/images/process-2.png'
 import development from '../assets/images/process-3.png'
 import launch from '../assets/images/process-4.png'
-import useScrollReveal from '../hooks/useScrollReveal'
+
+const fadeInLeft = {
+    hidden: { opacity: 0, x: -80, filter: "blur(10px)" },
+    show: { opacity: 1, x: 0, filter: "blur(0px)", transition: { duration: 0.8 } }
+}
+
+const fadeInRight = {
+    hidden: { opacity: 0, x: 80, filter: "blur(10px)" },
+    show: { opacity: 1, x: 0, filter: "blur(0px)", transition: { duration: 0.8 } }
+}
+
+const fadeUp = {
+    hidden: { opacity: 0, y: 50 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+}
 
 const ProcessSection = () => {
-    const ProcessItem = ({ title, desc, img, reverse }) => {
-
-        const { ref, isVisible } = useScrollReveal();
-
-        return (
-            <div ref={ref} className="relative md:mb-0 mb-25">
-
-                {/* vertical line */}
-                <div className={`absolute left-1/2 bg-red-500 w-px hidden lg:block transition-all duration-1000 ${isVisible ? "opacity-100 h-full" : `opacity-0 ${reverse ? "h-0" : "-h-0"}`} `}  ></div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-22 items-center">
-
-                    {/* TEXT */}
-                    <div className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : `opacity-0 ${reverse ? "translate-x-20 " : "-translate-x-20"}`} ${reverse ? "lg:order-2 lg:text-left" : "lg:text-right"}`}>
-                        <div className={`hidden lg:block absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-red-500 rotate-45 ${reverse ? "-left-7" : "-right-7"}`} />
-                        <h3 className="text-4xl font-bold uppercase mb-6 text-white mx-6">{title}</h3>
-                        <p className="text-[#ababab] text-md lg:text-lg mx-6">{desc}</p>
-                    </div>
-
-                    {/* IMAGE */}
-                    <div
-                        className={`relative transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : `opacity-0 ${reverse ? "-translate-x-20" : "translate-x-20"}`}`}>
-                        <div className="w-full aspect-video relative z-0">
-                            <img
-                                src={img}
-                                alt={title}
-                                className="w-full h-full object-cover grayscale opacity-40 border shadow-2xl"
-                            />
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        );
-    };
     return (
-        <section className="font-head bg-[#0a0a0a]" id='services'>
+        <section className="font-head bg-[#0a0a0a]" id="services">
 
-            <div className='max-w-425 mx-auto py-10 md:py-32 px-8 md:px-24'>
+            <div className="max-w-425 mx-auto py-10 md:py-32 px-8 md:px-24">
 
                 {/* HEADER */}
-                <div className='mb-24 text-center'>
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.6 }}
+                    className="mb-24 text-center"
+                >
                     <span className="text-[#ff8e7d] font-bold tracking-[0.2em] uppercase text-sm mb-4 block">
                         04 / EXECUTION
                     </span>
-                    <h1 className="text-4xl md:text-6xl font-black uppercase mb-24 text-white">
+                    <h1 className="text-4xl md:text-6xl font-black uppercase text-white">
                         THE KINETIC CYCLE
                     </h1>
-                </div>
+                </motion.div>
 
                 {/* ================= STRATEGY ================= */}
-                <ProcessItem
-                    title="STRATEGY"
-                    desc="We map the competitive landscape and identify the fracture points where your brand can exert maximum leverage. No guesswork, only architectural planning."
-                    img={strategy}
-                    reverse={false}
-                />
+                <motion.div
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={fadeUp}
+                    className="relative"
+                >
+                    <div className="absolute left-1/2 w-px h-full bg-red-500 hidden lg:block"></div>
+
+                    <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-red-500 rotate-45 shadow-[0_0_20px_rgba(255,0,0,0.6)]"></div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 relative bg- gap-25 items-center">
+
+                        <motion.div
+                            variants={fadeInLeft}
+                            className="lg:text-right mx-6"
+                        >
+
+                            <h3 className="text-4xl font-bold uppercase mb-6 text-white">
+                                STRATEGY
+                            </h3>
+                            <p className="text-[#ababab] text-md lg:text-lg">
+                                We map the competitive landscape and identify fracture points where your brand can exert maximum leverage.
+                            </p>
+                        </motion.div>
+
+                        <motion.div variants={fadeInRight}>
+                            <img
+                                src={strategy}
+                                alt="strategy"
+                                className="w-full aspect-video object-cover grayscale opacity-40 border shadow-2xl"
+                            />
+                        </motion.div>
+
+                    </div>
+                </motion.div>
 
                 {/* ================= DESIGN ================= */}
-                <ProcessItem
-                    title="DESIGN"
-                    desc="The visualization of the monolith. We translate strategy into a high-octane visual language."
-                    img={design}
-                    reverse={true}
-                />
+                <motion.div
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={fadeUp}
+                    className="relative"
+                >
+                    <div className="absolute left-1/2 w-px h-full bg-red-500 hidden lg:block"></div>
+                    <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-red-500 rotate-45 shadow-[0_0_20px_rgba(255,0,0,0.6)]"></div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-25 items-center">
+
+                        <motion.div variants={fadeInRight} className="order-1 lg:order-1">
+                            <img
+                                src={design}
+                                alt="design"
+                                className="w-full aspect-video object-cover grayscale opacity-40 border shadow-2xl"
+                            />
+                        </motion.div>
+
+                        <motion.div
+                            variants={fadeInLeft}
+                            className="lg:text-left mx-6 order-2"
+                        >
+                            <h3 className="text-4xl font-bold uppercase mb-6 text-white">
+                                DESIGN
+                            </h3>
+                            <p className="text-[#ababab] text-md lg:text-lg">
+                                We translate strategy into a high-octane visual language defining your digital presence.
+                            </p>
+                        </motion.div>
+
+                    </div>
+                </motion.div>
 
                 {/* ================= DEVELOPMENT ================= */}
-                <ProcessItem
-                    title="DEVELOPMENT"
-                    desc="Forging the digital metal. Built with military precision for global deployment."
-                    img={development}
-                    reverse={false}
-                />
+                <motion.div
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={fadeUp}
+                    className="relative"
+                >
+                    <div className="absolute left-1/2 w-px h-full bg-red-500 hidden lg:block"></div>
+                    <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-red-500 rotate-45 shadow-[0_0_20px_rgba(255,0,0,0.6)]"></div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-25 items-center">
+
+                        <motion.div variants={fadeInLeft} className="lg:text-right mx-6">
+                            <h3 className="text-4xl font-bold uppercase mb-6 text-white">
+                                DEVELOPMENT
+                            </h3>
+                            <p className="text-[#ababab] text-md lg:text-lg">
+                                Built with precision. Fast, secure, and scalable systems for global deployment.
+                            </p>
+                        </motion.div>
+
+                        <motion.div variants={fadeInRight}>
+                            <img
+                                src={development}
+                                alt="development"
+                                className="w-full aspect-video object-cover grayscale opacity-40 border shadow-2xl"
+                            />
+                        </motion.div>
+
+                    </div>
+                </motion.div>
 
                 {/* ================= LAUNCH ================= */}
-                <ProcessItem
-                    title="LAUNCH"
-                    desc="System online. We launch with maximum impact and monitor every metric."
-                    img={launch}
-                    reverse={true}
-                />
+                <motion.div
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={fadeUp}
+                    className="relative mb-10"
+                >
+                    <div className="absolute left-1/2 w-px h-full bg-red-500 hidden lg:block"></div>
+                    <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-red-500 rotate-45 shadow-[0_0_20px_rgba(255,0,0,0.6)]"></div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-25 items-center">
+
+                        <motion.div variants={fadeInRight} className="order-2 lg:order-1">
+                            <img
+                                src={launch}
+                                alt="launch"
+                                className="w-full aspect-video object-cover grayscale opacity-40 border shadow-2xl"
+                            />
+                        </motion.div>
+
+                        <motion.div
+                            variants={fadeInLeft}
+                            className="lg:text-left mx-6 order-1"
+                        >
+                            <h3 className="text-4xl font-bold uppercase mb-6 text-white">
+                                LAUNCH
+                            </h3>
+                            <p className="text-[#ababab] text-md lg:text-lg">
+                                System online. We launch with maximum impact and monitor every metric.
+                            </p>
+                        </motion.div>
+
+                    </div>
+                </motion.div>
 
             </div>
         </section>
