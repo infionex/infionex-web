@@ -111,7 +111,7 @@ const ProcessSection = () => {
                             variants={fadeUp}
                             className="relative "
                         >
-                            <div className="absolute left-1/2 w-px h-full bg-red-500 hidden lg:block" />
+                            <div className="absolute overflow-x-hidden left-1/2 w-px h-full bg-red-500 hidden lg:block" />
 
                             <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-red-500 rotate-45 shadow-[0_0_20px_rgba(255,0,0,0.6)]" />
 

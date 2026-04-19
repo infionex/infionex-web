@@ -70,26 +70,11 @@ export default function Navbar() {
   }, [])
 
   // ✅ lock scroll when menu open
-  useEffect(() => {
-    document.body.style.overflowY = menu ? 'hidden' : ''
+ useEffect(() => {
+    document.body.style.overflow = menu ? 'hidden' : ''
   }, [menu])
 
-  // ✅ isolated screen overflow fix (only in this file)
-  useEffect(() => {
-    const html = document.documentElement
-    const body = document.body
 
-    const originalHtmlOverflowX = html.style.overflowX
-    const originalBodyOverflowX = body.style.overflowX
-
-    html.style.overflowX = 'hidden'
-    body.style.overflowX = 'hidden'
-
-    return () => {
-      html.style.overflowX = originalHtmlOverflowX
-      body.style.overflowX = originalBodyOverflowX
-    }
-  }, [])
 
   return (
 
@@ -144,11 +129,11 @@ export default function Navbar() {
                 className={`absolute left-0 top-[20%] bottom-[20%] w-0.5 bg-primary-color rounded-r
                   transition-transform duration-200
                   ${active === item ? 'scale-y-100' : 'scale-y-0'}`}
-              />
-              {item.toUpperCase()}
-            </button>
-          ))}
-        </nav>
+                />
+                {item.toUpperCase()}
+              </button>
+            ))}
+          </nav>
 
         {/* CTA */}
         <button
