@@ -13,25 +13,25 @@ export default function ServicesSection() {
             id: 1,
             image: service1,
             icon: TvMinimal,
-            title: "DIGITAL MARKETING",
-            description: "Weaponizing data to target high-intent audiences with surgical precision. We don't just generate traffic; we orchestrate conversions.",
-            features: ["PERFORMANCE AUDITS", "ALGORITHMIC GROWTH", "PRECISION RETARGETING"]
+            title: "WEB DEVELOPMENT",
+            description: "Building high-performance websites that are fast, scalable, and built to convert. We focus on clean architecture and seamless user experience.",
+            features: ["CUSTOM WEB SOLUTIONS", "PERFORMANCE OPTIMIZATION", "SCALABLE ARCHITECTURE"]
         },
         {
             id: 2,
             image: service2,
-            icon: TrendingUp,
-            title: "BRANDING",
-            description: "  Forging visceral identities that exist beyond trends. We create visual languages that resonate at a frequency of luxury and power.",
-            features: ["VISUAL IDENTITY SYSTEMS", "EDITORIAL DESIGN", "CORE BRAND MANIFESTO"]
+            icon:  LayoutGrid,
+            title: "BRANDING & DESIGN",
+            description: " Crafting distinctive brand identities that communicate clearly and leave a lasting impression. Built with strategy, consistency, and purpose..",
+            features: ["VISUAL IDENTITY SYSTEMS", "BRAND STRATEGY", "CREATIVE DIRECTION"]
         },
         {
             id: 3,
             image: service3,
-            icon: LayoutGrid,
-            title: "UI/UX DESIGN",
-            description: "  Architecting frictionless interfaces that feel inevitable. High-fidelity prototypes that bridge the gap between human and machine.",
-            features: ["HAPTIC INTERFACES", "MOTION SYSTEMS", "USER PSYCHOLOGY"]
+            icon: TrendingUp,
+            title: "DIGITAL MARKETING",
+            description: " Helping brands grow online with targeted campaigns and performance-focused marketing.",
+            features: ["SEO & PERFORMANCE MARKETING", "SOCIAL MEDIA STRATEGY", "CONTENT MARKETING"]
         }
     ]
     return (

@@ -7,7 +7,7 @@ export default function Navbar() {
   const [menu, setMenu] = useState(false)
   const [active, setActive] = useState("home")
 
-  const navItems = ["home", "about", "services", "our approach", "why us", "contact"]
+  const navItems = ["home", "about", "services", "our-approach", "why-us", "contact"]
 
   const navRefs = useRef([])
   const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 })
@@ -127,11 +127,10 @@ export default function Navbar() {
             >
               <span
                 className={`absolute left-0 top-[20%] bottom-[20%] w-0.5 bg-primary-color rounded-r
-                  transition-transform duration-200
                   ${active === item ? 'scale-y-100' : 'scale-y-0'}`}
-                />
-                {item.toUpperCase()}
-              </button>
+              />
+              {item.replace("-", " ").toUpperCase()}
+            </button>
             ))}
           </nav>
 
@@ -169,7 +168,7 @@ export default function Navbar() {
                     ? "text-white"
                     : "text-label-color hover:text-third-color"}`}
               >
-                {item.toUpperCase()}
+                {item.replace("-", " ").toUpperCase()}
               </button>
             ))}
 

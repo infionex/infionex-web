@@ -17,8 +17,8 @@ export default function Footer() {
                         <a className="text-[#484848] hover:text-white transition-colors underline-offset-4 hover:underline" href="#hero">HOME</a>
                         <a className="text-[#484848] hover:text-white transition-colors underline-offset-4 hover:underline" href="#about">ABOUT</a>
                         <a className="text-[#484848] hover:text-white transition-colors underline-offset-4 hover:underline" href="#services">SERVICES</a>
-                        <a className="text-[#484848] hover:text-white transition-colors underline-offset-4 hover:underline" href="#process">PROCESS</a>
-                           <a className="text-[#484848] hover:text-white transition-colors underline-offset-4 hover:underline" href="#process">WHY US</a>
+                        <a className="text-[#484848] hover:text-white transition-colors underline-offset-4 hover:underline" href="#our-approach">OUR APPROACH</a>
+                           <a className="text-[#484848] hover:text-white transition-colors underline-offset-4 hover:underline" href="#why-us">WHY US</a>
                         <a className="text-[#484848] hover:text-white transition-colors underline-offset-4 hover:underline" href="#contact">CONTACT</a>
                     </nav>
                     <div className="flex gap-4 sm:gap-6">

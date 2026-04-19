@@ -56,7 +56,7 @@ const steps = [
 
 const ProcessSection = () => {
     return (
-        <section id='our approach' className="font-head bg-[#0a0a0a]" id="services">
+        <section id='our-approach' className="font-head bg-[#0a0a0a]">
             <div className="max-w-425 mx-auto py-10 md:py-32 px-8 md:px-24">
 
 

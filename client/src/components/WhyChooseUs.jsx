@@ -63,7 +63,7 @@ const cardVariants = {
 
 export default function WhyChooseUs() {
   return (
-    <section id="why us" className="relative w-full bg-gradient-to-b from-[#070707] via-[#0b0b0b] to-[#070707] text-white py-16 md:py-24 px-8 sm:px-8 md:px-16 lg:px-24 overflow-hidden">
+    <section id="why-us" className="relative w-full bg-gradient-to-b from-[#070707] via-[#0b0b0b] to-[#070707] text-white py-16 md:py-24 px-8 sm:px-8 md:px-16 lg:px-24 overflow-hidden">
       {/* Background Glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-red-500/10 blur-[100px] md:blur-[120px] rounded-full" />
