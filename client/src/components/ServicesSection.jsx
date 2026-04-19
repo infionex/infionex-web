@@ -37,8 +37,8 @@ export default function ServicesSection() {
     return (
         <section className="font-head bg-[#131313]" id="services">
             <div className="max-w-425 mx-auto py-22 md:py-32 px-8 md:px-24   ">
-                <span className="text-[#ff8e7d] font-headline font-bold tracking-[0.2em] uppercase text-sm mb-4 block" >03 / CAPABILITIES</span>
-                <h2 className="font-headline text-4xl md:text-6xl font-black tracking-tighter uppercase mb-24 text-white" >SYSTEMS OF INFLUENCE</h2>
+                <span className="text-[#ff8e7d] font-headline font-bold tracking-[0.2em] uppercase text-sm mb-4 block" >03 / SERVICES</span>
+                <h2 className="font-headline text-4xl md:text-6xl font-black tracking-tighter uppercase mb-10 md:mb-24 text-white" >SYSTEMS OF INFLUENCE</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 border-[#484848]/10">
                         {services?.map((service,index ) => {

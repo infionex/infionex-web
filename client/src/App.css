@@ -1,3 +1,15 @@
  .kinetic-gradient {
             background: linear-gradient(135deg, #ff8e7d 0%, #eb0000 100%);
         }
+
+ .scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-20px); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
+}       

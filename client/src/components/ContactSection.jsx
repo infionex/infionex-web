@@ -9,7 +9,7 @@ const ContactSection = () => {
             <div className='max-w-425 mx-auto py-10 md:py-20 px-8 md:px-24 '>
                 <div className='grid grid-cols-1 lg:grid-cols-2  text-white'>
                     <div>
-                        <span className="text-[#ff8e7d] font-headline font-bold tracking-[0.2em] uppercase text-sm mb-4 block">05 / COMMENCE</span>
+                        <span className="text-[#ff8e7d] font-headline font-bold tracking-[0.2em] uppercase text-sm mb-4 block">05 / CONTACT</span>
                         <h1 className="font-headline text-4xl md:text-6xl font-black tracking-tighter uppercase mb-10 text-white" >LET'S BUILD<br />SOMETHING BOLD</h1>
 
                         <div className='flex items-start '>

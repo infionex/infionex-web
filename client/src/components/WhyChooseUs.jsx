@@ -63,7 +63,7 @@ const cardVariants = {
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative w-full bg-gradient-to-b from-[#070707] via-[#0b0b0b] to-[#070707] text-white py-16 md:py-24 px-4 sm:px-8 md:px-16 lg:px-24 overflow-hidden">
+    <section className="relative w-full bg-gradient-to-b from-[#070707] via-[#0b0b0b] to-[#070707] text-white py-16 md:py-24 px-8 sm:px-8 md:px-16 lg:px-24 overflow-hidden">
       {/* Background Glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-red-500/10 blur-[100px] md:blur-[120px] rounded-full" />
@@ -80,7 +80,7 @@ export default function WhyChooseUs() {
         <span className="text-[#ff8e7d] font-family-headline font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-3 block">
           05 / WHY CHOOSE US
         </span>
-        <h1 className="text-3xl font-family-headline sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter uppercase text-white leading-tight px-2">
+        <h1 className=" font-family-headline text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter uppercase text-white leading-tight px-2">
           THE INFIONEX ADVANTAGE
         </h1>
         <div className="w-16 md:w-24 h-[2px] bg-red-500 mx-auto mt-5 md:mt-6" />

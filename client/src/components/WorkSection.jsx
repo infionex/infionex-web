@@ -29,22 +29,22 @@ export default function WorkSection() {
 
     return (
         <section id='work' className="font-head bg-[#0e0e0e]">
-            <div className='max-w-7xl mx-auto py-16 md:py-24 px-8 sm:px-8 md:px-12 lg:px-24'>
+            <div className='max-w-425 mx-auto py-22 md:py-32 px-8 md:px-24  '>
 
                 <div className="mb-12 md:mb-20 flex justify-between items-start">
                     <div>
                         <span className="text-[#ff8e7d] font-headline font-bold tracking-[0.2em] uppercase text-xs sm:text-sm block">
-                            02 / PORTFOLIO
+                            02 / WORKS
                         </span>
                         <h2 className="font-headline mt-4 md:mt-5 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter uppercase text-white leading-tight">
                             SELECTED ARTIFACTS
                         </h2>
                     </div>
-                    <div className='hidden md:block mt-10 md:mt-12 shrink-0 ml-6'>
+                    {/* <div className='hidden md:block mt-10 md:mt-12 shrink-0 ml-6'>
                         <button className="font-headline text-xs text-white font-bold tracking-widest uppercase border-b-2 border-[#ff8e7d] pb-2 hover:text-[#ff6b5c] transition-colors">
                             VIEW ALL WORK
                         </button>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 text-white">

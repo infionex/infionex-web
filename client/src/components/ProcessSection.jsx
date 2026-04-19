@@ -21,13 +21,45 @@ const fadeUp = {
     show: { opacity: 1, y: 0, transition: { duration: 0.6 } }
 }
 
+const steps = [
+    {
+        key: 'strategy',
+        src: strategy,
+        title: 'STRATEGY',
+        desc: 'We map the competitive landscape and identify fracture points where your brand can exert maximum leverage.',
+        textSide: 'left',
+    },
+    {
+        key: 'design',
+        src: design,
+        title: 'DESIGN',
+        desc: 'We translate strategy into a high-octane visual language defining your digital presence.',
+        textSide: 'right',
+    },
+    {
+        key: 'development',
+        src: development,
+        title: 'DEVELOPMENT',
+        desc: 'Built with precision. Fast, secure, and scalable systems for global deployment.',
+      
+        textSide: 'left',
+    },
+    {
+        key: 'launch',
+        src: launch,
+        title: 'LAUNCH',
+        desc: 'System online. We launch with maximum impact and monitor every metric.',
+       
+        textSide: 'right',
+    },
+]
+
 const ProcessSection = () => {
     return (
         <section className="font-head bg-[#0a0a0a]" id="services">
-
             <div className="max-w-425 mx-auto py-10 md:py-32 px-8 md:px-24">
 
-                {/* HEADER */}
+              
                 <motion.div
                     initial={{ opacity: 0, y: 80 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -43,148 +75,74 @@ const ProcessSection = () => {
                     </h1>
                 </motion.div>
 
-                {/* ================= STRATEGY ================= */}
-                <motion.div
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amount: 0.3 }}
-                    variants={fadeUp}
-                    className="relative"
-                >
-                    <div className="absolute left-1/2 w-px h-full bg-red-500 hidden lg:block"></div>
+                {steps.map((step) => {
+                    const isTextLeft = step.textSide === 'left'
 
-                    <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-red-500 rotate-45 shadow-[0_0_20px_rgba(255,0,0,0.6)]"></div>
-
-                    <div className="grid grid-cols-1 lg:grid-cols-2 relative bg- gap-25 items-center">
-
+                    const TextBlock = (
                         <motion.div
-                            variants={fadeInLeft}
-                            className="lg:text-right mx-6"
+                            variants={isTextLeft ? fadeInLeft : fadeInRight}
+                            className={`mx-2 md:mx-6 ${isTextLeft ? 'lg:text-right' : 'lg:text-left'}`}
                         >
-
-                            <h3 className="text-4xl font-bold uppercase mb-6 text-white">
-                                STRATEGY
+                            <h3 className=" text-2xl md:text-4xl font-bold uppercase mb-4 md:mb-6 text-white">
+                                {step.title}
                             </h3>
                             <p className="text-[#ababab] text-md lg:text-lg">
-                                We map the competitive landscape and identify fracture points where your brand can exert maximum leverage.
+                                {step.desc}
                             </p>
                         </motion.div>
+                    )
 
-                        <motion.div variants={fadeInRight}>
+                    const ImageBlock = (
+                        <motion.div variants={isTextLeft ? fadeInRight : fadeInLeft}>
                             <img
-                                src={strategy}
-                                alt="strategy"
-                                className="w-full aspect-video object-cover grayscale opacity-40 border shadow-2xl"
+                                src={step.src}
+                                alt={step.key}
+                                className="w-full mt-3 md:mt-0 aspect-video object-cover grayscale opacity-40 border shadow-2xl"
                             />
                         </motion.div>
+                    )
 
-                    </div>
-                </motion.div>
-
-                {/* ================= DESIGN ================= */}
-                <motion.div
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amount: 0.3 }}
-                    variants={fadeUp}
-                    className="relative"
-                >
-                    <div className="absolute left-1/2 w-px h-full bg-red-500 hidden lg:block"></div>
-                    <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-red-500 rotate-45 shadow-[0_0_20px_rgba(255,0,0,0.6)]"></div>
-
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-25 items-center">
-
-                        <motion.div variants={fadeInRight} className="order-1 lg:order-1">
-                            <img
-                                src={design}
-                                alt="design"
-                                className="w-full aspect-video object-cover grayscale opacity-40 border shadow-2xl"
-                            />
-                        </motion.div>
-
+                    return (
                         <motion.div
-                            variants={fadeInLeft}
-                            className="lg:text-left mx-6 order-2"
+                            key={step.key}
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: true, amount: 0.3 }}
+                            variants={fadeUp}
+                            className="relative "
                         >
-                            <h3 className="text-4xl font-bold uppercase mb-6 text-white">
-                                DESIGN
-                            </h3>
-                            <p className="text-[#ababab] text-md lg:text-lg">
-                                We translate strategy into a high-octane visual language defining your digital presence.
-                            </p>
+                            <div className="absolute left-1/2 w-px h-full bg-red-500 hidden lg:block" />
+                          
+                            <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-red-500 rotate-45 shadow-[0_0_20px_rgba(255,0,0,0.6)]" />
+
+                          
+                            <div className="flex flex-col gap-8 lg:grid lg:grid-cols-2 lg:gap-25 items-center">
+
+                                {isTextLeft ? (
+                                    <>
+                                   
+                                        <div className="lg:hidden">{ImageBlock}</div>
+                                        <div className="lg:hidden">{TextBlock}</div>
+
+                                     
+                                        <div className="hidden lg:block">{TextBlock}</div>
+                                        <div className="hidden lg:block">{ImageBlock}</div>
+                                    </>
+                                ) : (
+                                    <>
+                                      
+                                        <div className="lg:hidden">{ImageBlock}</div>
+                                        <div className="lg:hidden">{TextBlock}</div>
+
+                                        <div className="hidden lg:block">{ImageBlock}</div>
+                                        <div className="hidden lg:block">{TextBlock}</div>
+                                    </>
+                                )}
+
+                            </div>
                         </motion.div>
-
-                    </div>
-                </motion.div>
-
-                {/* ================= DEVELOPMENT ================= */}
-                <motion.div
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amount: 0.3 }}
-                    variants={fadeUp}
-                    className="relative"
-                >
-                    <div className="absolute left-1/2 w-px h-full bg-red-500 hidden lg:block"></div>
-                    <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-red-500 rotate-45 shadow-[0_0_20px_rgba(255,0,0,0.6)]"></div>
-
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-25 items-center">
-
-                        <motion.div variants={fadeInLeft} className="lg:text-right mx-6">
-                            <h3 className="text-4xl font-bold uppercase mb-6 text-white">
-                                DEVELOPMENT
-                            </h3>
-                            <p className="text-[#ababab] text-md lg:text-lg">
-                                Built with precision. Fast, secure, and scalable systems for global deployment.
-                            </p>
-                        </motion.div>
-
-                        <motion.div variants={fadeInRight}>
-                            <img
-                                src={development}
-                                alt="development"
-                                className="w-full aspect-video object-cover grayscale opacity-40 border shadow-2xl"
-                            />
-                        </motion.div>
-
-                    </div>
-                </motion.div>
-
-                {/* ================= LAUNCH ================= */}
-                <motion.div
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amount: 0.3 }}
-                    variants={fadeUp}
-                    className="relative mb-10"
-                >
-                    <div className="absolute left-1/2 w-px h-full bg-red-500 hidden lg:block"></div>
-                    <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-red-500 rotate-45 shadow-[0_0_20px_rgba(255,0,0,0.6)]"></div>
-
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-25 items-center">
-
-                        <motion.div variants={fadeInRight} className="order-2 lg:order-1">
-                            <img
-                                src={launch}
-                                alt="launch"
-                                className="w-full aspect-video object-cover grayscale opacity-40 border shadow-2xl"
-                            />
-                        </motion.div>
-
-                        <motion.div
-                            variants={fadeInLeft}
-                            className="lg:text-left mx-6 order-1"
-                        >
-                            <h3 className="text-4xl font-bold uppercase mb-6 text-white">
-                                LAUNCH
-                            </h3>
-                            <p className="text-[#ababab] text-md lg:text-lg">
-                                System online. We launch with maximum impact and monitor every metric.
-                            </p>
-                        </motion.div>
-
-                    </div>
-                </motion.div>
+                    )
+                })}
 
             </div>
         </section>
@@ -192,8 +150,6 @@ const ProcessSection = () => {
 }
 
 export default ProcessSection
-
-
 
 
 
