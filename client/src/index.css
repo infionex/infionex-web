@@ -17,7 +17,10 @@
   --color-label-color: #ABABAB;
 }
 
-/* index.css or global.css */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: black;
 }

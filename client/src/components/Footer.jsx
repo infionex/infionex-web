@@ -11,14 +11,14 @@ export default function Footer() {
                 <div className="flex flex-col md:flex-row justify-between items-center w-full px-6 sm:px-10 md:px-15 py-10 md:py-16 gap-6 md:gap-8 max-w-480 mx-auto">
                     <div className="flex flex-col gap-2 items-center md:items-start">
                         <img className='w-32 sm:w-40 md:w-45' src={logo} alt="Infionex Logo" />
-                        <p className="font-['Manrope'] text-xs tracking-widest uppercase text-[#484848] text-center md:text-left">© 2026 INFIONEX. ALL RIGHTS RESERVED.</p>
+                        <p className="font-['Manrope'] text-xs tracking-widest uppercase text-[#484848] text-center md:text-left">© 2026 INFIONEX.IN ALL RIGHTS RESERVED.</p>
                     </div>
                     <nav className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 font-['Manrope'] text-xs sm:text-sm tracking-widest uppercase">
-                        <a className="text-[#484848] hover:text-white transition-colors underline-offset-4 hover:underline" href="#hero">HERO</a>
+                        <a className="text-[#484848] hover:text-white transition-colors underline-offset-4 hover:underline" href="#hero">HOME</a>
                         <a className="text-[#484848] hover:text-white transition-colors underline-offset-4 hover:underline" href="#about">ABOUT</a>
-                        <a className="text-[#484848] hover:text-white transition-colors underline-offset-4 hover:underline" href="#work">WORK</a>
                         <a className="text-[#484848] hover:text-white transition-colors underline-offset-4 hover:underline" href="#services">SERVICES</a>
                         <a className="text-[#484848] hover:text-white transition-colors underline-offset-4 hover:underline" href="#process">PROCESS</a>
+                           <a className="text-[#484848] hover:text-white transition-colors underline-offset-4 hover:underline" href="#process">WHY US</a>
                         <a className="text-[#484848] hover:text-white transition-colors underline-offset-4 hover:underline" href="#contact">CONTACT</a>
                     </nav>
                     <div className="flex gap-4 sm:gap-6">

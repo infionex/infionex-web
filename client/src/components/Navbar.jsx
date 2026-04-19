@@ -7,7 +7,7 @@ export default function Navbar() {
   const [menu, setMenu] = useState(false)
   const [active, setActive] = useState("home")
 
-  const navItems = ["home", "about", "services", "work", "contact"]
+  const navItems = ["home", "about", "services", "our approach", "why us", "contact"]
 
   const navRefs = useRef([])
   const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 })

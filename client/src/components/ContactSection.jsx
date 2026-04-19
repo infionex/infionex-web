@@ -16,13 +16,13 @@ const ContactSection = () => {
                             <span><IoLocationSharp size={24} color='red' /></span>
                             <div className='mx-3'>
                                 <h4>COMMAND CENTERS</h4>
-                                <p>123 Main Street, City, State 12345</p>
+                                <p>MALAPPURAM, KERALA</p>
                             </div>
                         </div>
                         <div className='flex items-start my-10 '>
                             <span><MdEmail size={24} color='red' /></span>
                             <div className='mx-3'>
-                                <h4>DIRECT TRANSMISSION</h4>
+                                <h4>EMAIL ADDRESS</h4>
                                 <p>infionex.in@gmail.com</p>
                             </div>
                         </div>
@@ -43,7 +43,7 @@ const ContactSection = () => {
                                     className="absolute left-0 top-6 text-[#ababab] uppercase tracking-widest text-xs font-bold transition-all peer-focus:-top-2 peer-focus:text-[#ff8e7d] peer-[:not(:placeholder-shown)]:-top-2"
                                     htmlFor="name"
                                 >
-                                    IDENTIFIER / NAME
+                                 NAME
                                 </label>
                             </div>
 
@@ -58,7 +58,7 @@ const ContactSection = () => {
                                     className="absolute left-0 top-6 text-[#ababab] uppercase tracking-widest text-xs font-bold transition-all peer-focus:-top-2 peer-focus:text-[#ff8e7d] peer-[:not(:placeholder-shown)]:-top-2"
                                     htmlFor="email"
                                 >
-                                    TRANSMISSION / EMAIL
+                                    EMAIL
                                 </label>
                             </div>
 
@@ -73,7 +73,7 @@ const ContactSection = () => {
                                     className="absolute left-0 top-6 text-[#ababab] uppercase tracking-widest text-xs font-bold transition-all peer-focus:-top-2 peer-focus:text-[#ff8e7d] peer-[:not(:placeholder-shown)]:-top-2"
                                     htmlFor="message"
                                 >
-                                    MISSION DETAILS
+                                    MESSAGE
                                 </label>
                             </div>
 
@@ -81,7 +81,7 @@ const ContactSection = () => {
                                 className="w-full kinetic-gradient bg-linear-to-r from-third-color to-primary-color py-5 font-headline font-bold text-xl uppercase tracking-widest text-[#000000] transition-transform active:scale-95"
                                 type="submit"
                             >
-                                INITIATE PROTOCOL
+                                SEND MESSAGE
                             </button>
 
                         </form>

@@ -56,7 +56,7 @@ const steps = [
 
 const ProcessSection = () => {
     return (
-        <section className="font-head bg-[#0a0a0a]" id="services">
+        <section id='our approach' className="font-head bg-[#0a0a0a]" id="services">
             <div className="max-w-425 mx-auto py-10 md:py-32 px-8 md:px-24">
 
 
@@ -68,7 +68,7 @@ const ProcessSection = () => {
                     className="mb-24 text-center"
                 >
                     <span className="text-[#ff8e7d] font-bold tracking-[0.2em] uppercase text-sm mb-4 block">
-                        04 / EXECUTION
+                        03 / Our Approach
                     </span>
                     <h1 className="text-4xl md:text-6xl font-black uppercase text-white">
                         THE KINETIC CYCLE

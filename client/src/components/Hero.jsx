@@ -1,20 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from "framer-motion";
 import { ChevronDown } from 'lucide-react';
-
+import { Link } from 'react-router-dom'
 export default function Hero() {
 
     const [start, setStart] = useState(false);
 
-    const scrollDown = () => {
-        const section = document.getElementById("about")
-        if (!section) return
-
-        window.scrollTo({
-            top: section.offsetTop,
-            behavior: "smooth"
-        })
-    }
+    // Navigation is now handled natively via CSS scroll-margin-top and scroll-behavior: smooth
 
     const container = {
         hidden: {},
@@ -83,27 +75,33 @@ export default function Hero() {
                     variants={fadeUp}
                     className='flex flex-col md:flex-row gap-3 py-3 font-head font-bold'
                 >
-                    <button className='bg-linear-to-r from-third-color to-primary-color text-black px-8 py-3 uppercase'>
+                    <a
+                        href="#contact"
+                        className='inline-block bg-linear-to-r from-third-color to-primary-color text-black px-8 py-3 uppercase hover:from-third-color/90 hover:to-primary-color/90 transition-colors text-center'
+                    >
                         Start Your Growth
-                    </button>
-                    <button className='border border-label-color/40 px-8 py-3 uppercase'>
-                        Our Works
-                    </button>
+                    </a>
+                    <a
+                        href="tel:+917306616216"
+                        className='inline-block border border-label-color/40 px-8 py-3 uppercase hover:border-third-color transition-colors text-center'
+                    >
+                        BOOK A FREE CALL
+                    </a>
                 </motion.div>
 
             </motion.div>
 
             {/* SCROLL DOWN */}
-            <motion.div
+            <motion.a
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2, duration: 0.6 }}
-                onClick={scrollDown}
+                href="#about"
                 className='absolute bottom-5 md:right-5 flex items-center gap-2 text-label-color cursor-pointer'
             >
                 <span className='animate-bounce'>scroll down</span>
                 <ChevronDown className='h-5 animate-bounce' />
-            </motion.div>
+            </motion.a>
 
         </section>
     )
