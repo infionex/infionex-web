@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 export default function AboutUs() {
 
     return (
-        <section id='about' className='bg-secondary-color'>
+        <section id='about' className='bg-secondary-color w-screen'>
             <div className='flex flex-col md:flex-row max-w-425 mx-auto py-22 md:py-32 px-8 md:px-24   gap-10 md:gap-0'>
 
-                <div className='flex flex-col gap-8 md:gap-10 md:w-1/2 justify-center'>
+                <div className='flex flex-col gap-8 overflow-x-hidden md:gap-10 md:w-1/2 justify-center'>
                     <div className='flex flex-col gap-4 md:gap-6'>
                         <motion.p
                             initial={{ opacity: 0, x: -80 }}
@@ -39,7 +39,7 @@ export default function AboutUs() {
                     </motion.div>
                 </div>
 
-                <div className="w-full md:w-1/2 flex justify-center items-center px-4 md:px-10 mt-8 md:mt-0">
+                <div className="w-full md:w-1/2 flex overflow-x-hidden justify-center items-center px-4 md:px-10 mt-8 md:mt-0">
                     <motion.div
                         initial={{ opacity: 0, x: 80 }}
                         whileInView={{ opacity: 1, x: 0 }}
