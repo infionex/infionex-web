@@ -6,7 +6,7 @@ export default function AboutUs() {
 
     return (
         <section id='about' className='bg-secondary-color'>
-            <div className='flex flex-col md:flex-row overflow-x-hidden items-center max-w-425 mx-auto py-20 md:py-32 px-5 md:px-10 lg:px-24 gap-10 md:gap-12 lg:gap-20'>
+            <div className='flex flex-col md:flex-row overflow-x-hidden items-center max-w-425 mx-auto py-20 md:py-32 px-8 md:px-10 lg:px-24 gap-10 md:gap-12 lg:gap-20'>
 
                 <div className='flex flex-col gap-8 md:gap-10 md:w-[60%] justify-center'>
                     <div className='flex flex-col gap-4 md:gap-6'>

@@ -10,7 +10,7 @@ import WhyChooseUs from '../components/WhyChooseUs'
 export default function Home() {
   
   return (
-    <div>
+    <div className="overflow-x-hidden">
         <Hero/>
         <AboutUs/>
         <ServicesSection/>
