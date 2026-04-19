@@ -41,7 +41,7 @@ const steps = [
         src: development,
         title: 'DEVELOPMENT',
         desc: 'Built with precision. Fast, secure, and scalable systems for global deployment.',
-      
+
         textSide: 'left',
     },
     {
@@ -49,7 +49,7 @@ const steps = [
         src: launch,
         title: 'LAUNCH',
         desc: 'System online. We launch with maximum impact and monitor every metric.',
-       
+
         textSide: 'right',
     },
 ]
@@ -59,7 +59,7 @@ const ProcessSection = () => {
         <section className="font-head bg-[#0a0a0a]" id="services">
             <div className="max-w-425 mx-auto overflow-x-hidden py-10 md:py-32 px-8 md:px-24">
 
-              
+
                 <motion.div
                     initial={{ opacity: 0, y: 80 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -111,26 +111,26 @@ const ProcessSection = () => {
                             variants={fadeUp}
                             className="relative "
                         >
-                            <div className="absolute left-1/2 w-px h-full bg-red-500 hidden lg:block" />
-                          
+                            <div className="absolute overflow-x-hidden left-1/2 w-px h-full bg-red-500 hidden lg:block" />
+
                             <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-red-500 rotate-45 shadow-[0_0_20px_rgba(255,0,0,0.6)]" />
 
-                          
+
                             <div className="flex flex-col gap-8 lg:grid lg:grid-cols-2 lg:gap-25 items-center">
 
                                 {isTextLeft ? (
                                     <>
-                                   
+
                                         <div className="lg:hidden">{ImageBlock}</div>
                                         <div className="lg:hidden">{TextBlock}</div>
 
-                                     
+
                                         <div className="hidden lg:block">{TextBlock}</div>
                                         <div className="hidden lg:block">{ImageBlock}</div>
                                     </>
                                 ) : (
                                     <>
-                                      
+
                                         <div className="lg:hidden">{ImageBlock}</div>
                                         <div className="lg:hidden">{TextBlock}</div>
 

@@ -26,7 +26,7 @@ export default function Hero() {
     };
 
     const fadeUp = {
-        hidden: { opacity: 0, y: 50,  },
+        hidden: { opacity: 0, y: 50, },
         show: {
             opacity: 1,
             y: 0,
